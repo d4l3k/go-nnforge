@@ -1,10 +1,7 @@
 %module nnforge  //name of the resulting GO package
 
-%{
-#include "boost/tr1/random.hpp"
-%}
-
 #define SWIG_SHARED_PTR_SUBNAMESPACE tr1
+%include "extras.h"
 %include "std_string.i"
 %include "neural_network_toolset.h"
 %include "plain/plain.h"
