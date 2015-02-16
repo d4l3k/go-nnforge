@@ -1,7 +1,15 @@
 %module nnforge  //name of the resulting GO package
 
+%{
+#include "neural_network_toolset.h"
+#include "plain/plain.h"
+#include "nnforge.h"
+#include "factory_generator.h"
+typedef nnforge::factory_generator_smart_ptr factory_generator_smart_ptr;
+
+%}
+
 #define SWIG_SHARED_PTR_SUBNAMESPACE tr1
-%include "extras.h"
 %include "std_string.i"
 %include "neural_network_toolset.h"
 %include "plain/plain.h"
