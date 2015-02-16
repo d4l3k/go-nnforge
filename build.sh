@@ -1,9 +1,5 @@
-cd nnForge/nnforge
-cp ../../import.go .
-cp ../../nnforge.swigcxx .
+export NNFORGE=nnForge/nnforge
+cp import.go $NNFORGE
+cp nnforge.swigcxx $NNFORGE
 
-rm nnforge.go
-rm nnforge_wrap.cxx
-rm nnforge_gc.c
-
-go build -x -work
+go build -x
